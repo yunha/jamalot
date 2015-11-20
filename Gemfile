@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
-gem 'pg'
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'pry-rails', :group => :development3
+#gem 'pry-rails', :group => :development3
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
@@ -16,7 +15,8 @@ group :development, :test do
 end
 
 group :production do
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
