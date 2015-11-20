@@ -12,10 +12,37 @@
     <![endif]-->
   </head>
   <body>
-    <%= render 'layouts/header' %>
+    <%# render 'layouts/header' %> <%# commented out bc buggin up heroku%>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "Jamalot", '#', id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",   '#' %></li>
+          <li><%= link_to "Help",   '#' %></li>
+          <li><%= link_to "About", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+
+</header>
     <div class="container">
       <%= yield %>
-      <%= render 'layouts/footer' %>
+
+    <%# render 'layouts/footer' %> <%# commented out bc buggin up heroku%>
+    <footer class="footer">
+      <small>
+        Jamalot
+        by <a href="http://web.stanford.edu/class/cs147/projects/sharing/the_knights_of_jamalot/">the Knights of Jamalot</a>
+      </small>
+      <nav>
+        <ul>
+         <li><%= link_to "About",   '#' %></li>
+         <li><%= link_to "Contact", '#' %></li>
+        </ul>
+      </nav>
+    </footer>
+
     </div>
   </body>
 </html>
