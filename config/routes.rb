@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
-  root 'application#hello'
-  get 'application/hello'
+
+  root 'welcome#index'
+  get 'signup'  => 'users#new'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
